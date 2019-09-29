@@ -28,6 +28,27 @@ class Calc:
         else:
             print('Вы должны ввести "*" или "+"!')
 
+def calc_degrees():
+
+    # Задание 3
+
+    print("Если хотите посчитать синус то введите 1")
+    print("Если хотите посчитать косинус то введите 2")
+    a=int(input())
+    if(a==1):
+        print("Введите угол в градусах")
+        i=int(input())
+        rad=i/360*math.pi*2
+        print(math.sin(rad))
+    elif(a==2):
+        print("Введите угол в градусах")
+        i=int(input())
+        rad = i / 360 * math.pi * 2
+        print(math.cos(rad))
+        print()
+    else: print("Неверный ввод")
+    calc_degrees()
+            
 def str_words():
     
     # Задание 6
