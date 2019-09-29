@@ -96,7 +96,25 @@ def calc_simple():
         else:
             print(ravno)
     else:
-        print('Wrong operation')        
+        print('Wrong operation')      
+        
+def menu_strings():
+    
+    # Задание 7
+    
+    print('Добро пожаловать в калькулятор строк!')
+    print('Если вы хотите совершить простые операции со строками, нажмите "1".')
+    print('Если вы хотите подсчитать количество слов или символов в тексте, нажмите "2".')
+    while 1 == 1:
+        a = input()
+        if a == '1':
+            str_simple()
+            pass
+        elif a == '2':
+            str_words()
+            pass
+        else:
+            print('Неверный ввод. Пожалуйста, попробуйте еще раз.')
 
 def main():
 
