@@ -1,3 +1,10 @@
+def str_words():
+    
+    # Задание 6
+    
+    string = input("Введите строку: ")
+    print(str(len(string)) + " " + str(len(string.split())))
+    
 def menu_numbers():
 
     # Задание 4
