@@ -1,3 +1,5 @@
+import os
+
 class Calc:
 
     # Задание 5
@@ -51,6 +53,50 @@ def menu_numbers():
         print(3)
     else:
         print("Некорректный ввод")
+        
+def calc_simple():
+    
+    # Задание 1
+    
+    print('+ - * /')
+    print('Введите первое число')
+    try:
+        first = int(input())
+    except ValueError:
+        print('Неправильный тип вроде')
+        os.abort()
+    print('Введите второе число')
+    try:
+        second = int(input())
+    except ValueError:
+        print('Неправильный тип вроде')
+        os.abort()
+    print('Введите операцию')
+    try:
+        operation = input()
+    except ValueError:
+        print('Неправильный тип вроде')
+        os.abort()
+    if operation =='+':
+        ravno = first + second
+        print(ravno)
+    elif operation =='-':
+        ravno = first - second
+        print(ravno)
+    elif operation =='*':
+        ravno = first * second
+        print(ravno)
+    elif operation =='/':
+        try:
+            ravno = first / second
+        except ZeroDivisionError:
+            print('Невозможно')
+            print('Делить на ноль...Серьезно?')
+            ravno = 42
+        else:
+            print(ravno)
+    else:
+        print('Wrong operation')        
 
 def main():
 
