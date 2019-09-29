@@ -1,4 +1,5 @@
 import os
+import math
 
 class Calc:
 
@@ -67,11 +68,11 @@ def menu_numbers():
     type = int(input("Выберите номер действия: "))
 
     if type == 1:
-        print(1)
+        calc_simple()
     elif type == 2:
         print(2)
     elif type == 3:
-        print(3)
+        calc_degrees()
     else:
         print("Некорректный ввод")
         
