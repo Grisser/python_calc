@@ -29,6 +29,48 @@ class Calc:
         else:
             print('Вы должны ввести "*" или "+"!')
 
+def calc_extended():
+    
+    # Задание 2
+    
+    print("\nРасширенные операции:")
+    print(" 1. Возведение в степень")
+    print(" 2. Остаток от деления")
+    print(" 3. Нахождение корня\n")
+    definition = int(input("Выберите номер действия: "))
+    
+    if definition == 1:
+        try:
+            num = int(input("Введите число: "))
+            power = int(input("Введите степень: "))
+            a = num ** power
+        except ValueError:
+            print("Некорректный ввод")
+            calc_extended()
+        else:
+            print("Результат: " + str(num ** power))
+    elif definition == 2:
+        try:
+            num = int(input("Введите первое число: "))
+            num2 = int(input("Введите второе число: "))
+            a = num % num2
+        except ValueError:
+            print("Некорректный ввод")
+            calc_extended()
+        else:
+            print("Остаток от деления: " + str(num % num2))
+    elif definition == 3:
+        try:
+            num = int(input("Введите число: "))
+            a = num ** 0.5
+        except ValueError:
+            print("Некорректный ввод")
+            calc_extended()
+        else:
+            print("Результат: " + str(num ** 0.5))
+    else:
+        print("Некорректный ввод")
+            
 def calc_degrees():
 
     # Задание 3
