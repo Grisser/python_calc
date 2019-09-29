@@ -5,26 +5,26 @@ class Calc:
 
     # Задание 5
 
-    def __init__(self):
-        self.a = 0
+    def __init__():
+        a = 0
 
-    def str_simple(self):
+    def str_simple():
         print('Введите строку с операцией (* или +): ', end = '')
-        self.op = input()
+        op = input()
 
-        if self.op == '*':
-            self.str_1 = str(input('Введите строчку, которую нужно умножить: '))
+        if op == '*':
+            str_1 = str(input('Введите строчку, которую нужно умножить: '))
             try:
-                self.multi_str = int(input('Введите количество повторений строки выше (число): '))
+                multi_str = int(input('Введите количество повторений строки выше (число): '))
             except ValueError:
                 print('Это должно быть число!')
             else:
-                print(self.str_1*self.multi_str)
+                print(str_1*multi_str)
 
-        elif self.op == '+':
-            self.str_1 = str(input('Введите первую строку для сложения: '))
-            self.multi_str = str(input('Введите вторую строку для сложения: '))
-            print(self.str_1 + self.multi_str)
+        elif op == '+':
+            str_1 = str(input('Введите первую строку для сложения: '))
+            multi_str = str(input('Введите вторую строку для сложения: '))
+            print(str_1 + multi_str)
 
         else:
             print('Вы должны ввести "*" или "+"!')
@@ -146,9 +146,11 @@ def menu():
     a=int(input())
     if(a==1):
         print("Запуск калькулятора чисел") # тут должкен быть каль чисел
+        menu_numbers()
         pass
     elif(a==2):
         print("Запуск калькулятора строк") # тут доложен быть каль строк
+        menu_strings()
         pass
     else:
         print("Некорректный ввод")
