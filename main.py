@@ -1,3 +1,31 @@
+class Calc:
+
+    # Задание 5
+
+    def __init__(self):
+        self.a = 0
+
+    def str_simple(self):
+        print('Введите строку с операцией (* или +): ', end = '')
+        self.op = input()
+
+        if self.op == '*':
+            self.str_1 = str(input('Введите строчку, которую нужно умножить: '))
+            try:
+                self.multi_str = int(input('Введите количество повторений строки выше (число): '))
+            except ValueError:
+                print('Это должно быть число!')
+            else:
+                print(self.str_1*self.multi_str)
+
+        elif self.op == '+':
+            self.str_1 = str(input('Введите первую строку для сложения: '))
+            self.multi_str = str(input('Введите вторую строку для сложения: '))
+            print(self.str_1 + self.multi_str)
+
+        else:
+            print('Вы должны ввести "*" или "+"!')
+
 def str_words():
     
     # Задание 6
